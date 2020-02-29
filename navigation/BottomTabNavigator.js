@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabBarIcon from '../components/TabBarIcon';
-import Ballot from '../screens/BallotScreen';
-import Search from '../screens/SearchScreen';
+import BallotScreen from '../screens/BallotScreen';
+import SearchScreen from '../screens/SearchScreen';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Ballot';
@@ -17,9 +17,9 @@ export default function BottomTabNavigator({ navigation, route }) {
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
       <BottomTab.Screen
         name="Ballot"
-        component={Ballot}
+        component={BallotScreen}
         options={{
-          title: 'Your BallotScreen',
+          title: 'Ballot',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
         }}
       />
@@ -27,7 +27,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         name="Search"
         component={SearchScreen}
         options={{
-          title: 'Resources',
+          title: 'Search',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
         }}
       />
@@ -39,9 +39,9 @@ function getHeaderTitle(route) {
   const routeName = route.state?.routes[route.state.index]?.name ?? INITIAL_ROUTE_NAME;
 
   switch (routeName) {
-    case 'Home':
-      return 'How to get started';
-    case 'Links':
-      return 'Links to learn more';
+    case 'Ballot':
+      return 'Your Ballot';
+    case 'Search':
+      return 'Search Vote Traders';
   }
 }
