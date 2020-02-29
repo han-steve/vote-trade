@@ -20,7 +20,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={BallotScreen}
         options={{
           title: 'Ballot',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-search" />,
         }}
       />
       <BottomTab.Screen
