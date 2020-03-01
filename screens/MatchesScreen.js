@@ -23,11 +23,10 @@ export default class MatchesScreen extends React.Component {
   }
   render() {
   return (
-      <View>
-        <Text style={styles.header}>Your Matches:</Text>
+      <View style={styles.container}>
         {this.state.users.map(prop => {
           return (
-            <View style={styles.userCard} key={users.id}>
+            <View style={styles.userCard} key={prop.id}>
               <Image
                 style={{width: 50, height: 50}}
                 source={{uri: '../assets/images/default_profile_pic.jpg'}}
@@ -51,17 +50,18 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     flex: 1,
-    backgroundColor: '#fafafa'
   },
   header: {
     fontSize: 30,
     fontWeight: "800"
   }, 
   userCard: {
-
+    padding: 20, 
+    backgroundColor: '#fafafa'
   },
   userName: {
-
+    fontSize: 20,
+    fontWeight: "500"
   },
 
 });
