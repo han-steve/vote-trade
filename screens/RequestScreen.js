@@ -16,6 +16,7 @@ export default class MatchesScreen extends React.Component {
   return (
 
     //put stuff here
+    <View></View>
   );  
   }
   
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 30,
-    fontWeight: bold
+    // fontWeight: bold
   }, 
   userCard: {
 

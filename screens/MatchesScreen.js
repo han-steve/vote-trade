@@ -17,14 +17,7 @@ export default class MatchesScreen extends React.Component {
           yourFors: ["propD"],
           yourAgainsts: ["propF"],
           image: "../assets/images/default_profile_pic.jpg"
-        },
-        {
-          id: 1,
-          name: "Mike Scott",
-          theirProps: ["propE", "propH"],
-          yourProps: ["propG", "propI"], 
-          image: "../assets/images/default_profile_pic.jpg"        
-        },
+        }
       ]
     }
   }

@@ -3,6 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabBarIcon from '../components/TabBarIcon';
 import BallotScreen from '../screens/BallotScreen';
 import SearchScreen from '../screens/SearchScreen';
+import MatchesScreen from '../screens/MatchesScreen';
+import RequestScreen from '../screens/RequestScreen';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Ballot';
@@ -20,7 +22,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={BallotScreen}
         options={{
           title: 'Ballot',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-search" />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-checkbox-outline" />,
         }}
       />
       <BottomTab.Screen
@@ -28,7 +30,23 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={SearchScreen}
         options={{
           title: 'Search',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-search" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Matches"
+        component={MatchesScreen}
+        options={{
+          title: 'Matches',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-people" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Requests"
+        component={RequestScreen}
+        options={{
+          title: 'Requests',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-person-add" />,
         }}
       />
     </BottomTab.Navigator>
@@ -43,5 +61,9 @@ function getHeaderTitle(route) {
       return 'Your Ballot';
     case 'Search':
       return 'Search Vote Traders';
+    case 'Matches':
+      return 'Your Matches';
+    case 'Requests':
+      return 'Incoming Vote Trade Requests';
   }
 }
