@@ -29,11 +29,11 @@ export default class MatchesScreen extends React.Component {
             <View style={styles.userCard} key={prop.id}>
               <Image
                 style={{width: 50, height: 50}}
-                source={{uri: '../assets/images/default_profile_pic.jpg'}}
+                source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}
               />
               <Text style={styles.userName}>{prop.name}</Text>
-              <Text>You will vote for {prop.fors[0]} and against {prop.againsts[0]}</Text>
-              <Text>In return, {prop.name} will vote for {prop.yourFors[0]} and against {prop.yourAgainsts[0]}</Text>
+              <Text>You will vote for {prop.fors[0]} and against {prop.againsts[0]};</Text>
+              <Text>In return, {prop.name} will vote for {prop.yourFors[0]} and against {prop.yourAgainsts[0]}.</Text>
             </View>
           )
         })

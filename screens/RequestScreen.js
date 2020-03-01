@@ -14,9 +14,9 @@ export default class MatchesScreen extends React.Component {
   }
   render() {
   return (
-
-    //put stuff here
-    <View></View>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>      
+      <Text>You currently have no requests.</Text>
+    </View>
   );  
   }
   
