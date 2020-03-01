@@ -52,7 +52,8 @@ export default class BallotScreen extends React.Component {
           return (
             <View style={styles.propCard} key={prop.id}>
               <Text style={styles.propTitle}>{prop.name}</Text>
-              <Text>{prop.value}</Text>
+              <Text style={styles.propDescription}>{prop.description}</Text>
+              <Text style={styles.propValue}>{prop.value}</Text>
               <Button title="For" onPress={() => this.onUpdate(prop.id, "For")}></Button>
               <Button title="Against" onPress={() => this.onUpdate(prop.id, "Against")}></Button>
               <Button title="I have no preference" onPress={() => this.onUpdate(prop.id, "I have no preference")}></Button>
@@ -72,6 +73,14 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 30,
     fontWeight: '800',
+  },
+  propValue: {
+    marginBottom: 10,
+    fontSize: 20,
+    fontWeight: '800'
+  },
+  propDescription: {
+    marginBottom: 10
   },
   propCard: {
     backgroundColor: 'white',
